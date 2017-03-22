@@ -27,3 +27,7 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.8.7'
     compileOnly 'org.projectlombok:lombok:1.16.14'
 }
+
+springBoot {
+    executable = true
+}
