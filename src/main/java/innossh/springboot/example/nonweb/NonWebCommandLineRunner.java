@@ -1,4 +1,4 @@
-package innossh.springboot.example.notweb;
+package innossh.springboot.example.nonweb;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

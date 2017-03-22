@@ -1,4 +1,4 @@
-package innossh.springboot.example.notweb;
+package innossh.springboot.example.nonweb;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
