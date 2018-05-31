@@ -1,5 +1,6 @@
 package innossh.springboot.example.nonweb;
 
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
@@ -7,7 +8,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 public class NonWebSpringBootApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(NonWebSpringBootApplication.class).web(false).run(args);
+        new SpringApplicationBuilder(NonWebSpringBootApplication.class).web(WebApplicationType.NONE).run(args);
     }
 
 }

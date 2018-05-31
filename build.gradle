@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath('org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE')
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.2.RELEASE")
     }
 }
 
@@ -19,15 +19,15 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter') {
-        exclude group: 'ch.qos.logback'
-        exclude group: 'commons-logging'
-    }
-    compile 'org.slf4j:slf4j-simple:1.7.18'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.7'
-    compileOnly 'org.projectlombok:lombok:1.16.14'
+    compile 'org.springframework.boot:spring-boot-starter:2.0.2.RELEASE'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.5'
+    compileOnly 'org.projectlombok:lombok:1.16.22'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test:2.0.2.RELEASE'
 }
 
-springBoot {
-    executable = true
+bootRun {
+    if (project.hasProperty('args')) {
+        args project.args.split('\\s')
+    }
 }
